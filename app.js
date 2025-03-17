@@ -7,6 +7,10 @@ function agregarAmigo() {
         alert("INGRESE UN NOMBRE PORFAVOR");
         return;
     }
+    if (/\d/.test(amigo)) {
+        alert("El nombre no debe contener números");
+        return;
+    }
     listaDeAmigos.push(amigo);
     document.getElementById('amigo').value = '';
     
